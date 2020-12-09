@@ -1,0 +1,7 @@
+2020-12-09 00:33:55.451 +02:00 [INF] Starting
+2020-12-09 00:36:35.401 +02:00 [INF] Starting
+2020-12-09 00:36:41.056 +02:00 [INF] Request: GetArticlesQuery  {"$type":"GetArticlesQuery"}
+2020-12-09 00:36:43.420 +02:00 [WRN] Long Running Request: GetArticlesQuery (2392 milliseconds) {"$type":"GetArticlesQuery"}
+2020-12-09 00:39:00.468 +02:00 [INF] Starting
+2020-12-09 00:39:13.429 +02:00 [INF] Request: GetArticlesQuery  {"$type":"GetArticlesQuery"}
+2020-12-09 00:39:14.126 +02:00 [WRN] Long Running Request: GetArticlesQuery (704 milliseconds) {"$type":"GetArticlesQuery"}

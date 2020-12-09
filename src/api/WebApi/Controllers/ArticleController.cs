@@ -18,9 +18,9 @@ namespace WebApi.Controllers
     }
 
     [HttpGet]
-    public async Task<Response<IEnumerable<ArticlesDto>>> Get(GetArticlesQuery query)
+    public async Task<Response<IEnumerable<ArticlesDto>>> Get()
     {
-      return await Mediator.Send(query);
+      return await Mediator.Send(new GetArticlesQuery());
     }
 
     [HttpPost]
