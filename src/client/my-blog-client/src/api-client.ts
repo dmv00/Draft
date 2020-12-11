@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ICreateArticleCommand } from './models/Articles/Commands';
+import { ICreateArticleCommand } from './models/articles/commands';
 import { Response } from './models/response-model'
 
 export const API_BASE_URL = "http://localhost:5001"  //web api base url
