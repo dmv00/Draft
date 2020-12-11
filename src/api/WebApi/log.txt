@@ -10,3 +10,13 @@
 2020-12-11 12:51:38.265 +02:00 [INF] Request: GetArticleByIdQuery  {"ArticleId":1,"$type":"GetArticleByIdQuery"}
 2020-12-11 12:51:39.677 +02:00 [WRN] Long Running Request: GetArticlesQuery (3985 milliseconds) {"$type":"GetArticlesQuery"}
 2020-12-11 12:51:49.889 +02:00 [WRN] Long Running Request: GetArticleByIdQuery (11624 milliseconds) {"ArticleId":1,"$type":"GetArticleByIdQuery"}
+2020-12-11 12:57:11.757 +02:00 [INF] Starting
+2020-12-11 12:57:45.706 +02:00 [INF] Request: CreateArticleCommand  {"Title":"Client Test Article","Content":"some data","$type":"CreateArticleCommand"}
+2020-12-11 12:57:47.822 +02:00 [WRN] Long Running Request: CreateArticleCommand (2123 milliseconds) {"Title":"Client Test Article","Content":"some data","$type":"CreateArticleCommand"}
+2020-12-11 13:03:59.015 +02:00 [INF] Request: CreateArticleCommand  {"Title":"Client Test Article","Content":"some data","$type":"CreateArticleCommand"}
+2020-12-11 13:04:31.674 +02:00 [INF] Request: CreateArticleCommand  {"Title":"Client Test Article","Content":"some data","$type":"CreateArticleCommand"}
+2020-12-11 13:04:44.783 +02:00 [INF] Request: CreateArticleCommand  {"Title":"Client Test Article","Content":"some data","$type":"CreateArticleCommand"}
+2020-12-11 13:04:55.839 +02:00 [INF] Request: CreateArticleCommand  {"Title":"Client Test Article","Content":"some data","$type":"CreateArticleCommand"}
+2020-12-11 13:06:44.588 +02:00 [INF] Request: CreateArticleCommand  {"Title":"Client Test Article","Content":"some data","$type":"CreateArticleCommand"}
+2020-12-11 13:06:50.011 +02:00 [INF] Request: CreateArticleCommand  {"Title":"Client Test Article","Content":"some data","$type":"CreateArticleCommand"}
+2020-12-11 13:13:29.919 +02:00 [INF] Request: CreateArticleCommand  {"Title":"Client Test Article","Content":"some data","$type":"CreateArticleCommand"}
