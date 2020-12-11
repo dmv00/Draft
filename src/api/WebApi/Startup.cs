@@ -23,6 +23,7 @@ namespace WebApi
     {
       services.AddApplication();
       services.AddInfrastructure(Configuration);
+      services.AddCors();
       services.AddControllersWithViews(options =>
             options.Filters.Add(new ApiExceptionFilterAttribute()))
          .AddFluentValidation();
@@ -35,6 +36,14 @@ namespace WebApi
         app.UseDeveloperExceptionPage();
       }
 
+      app.UseCors(builder =>
+      {
+        builder.AllowAnyHeader()
+          .AllowAnyMethod()
+          .WithOrigins("http://localhost:3000")
+          .AllowCredentials();
+      });
+      
       app.UseRouting();
       app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
     }

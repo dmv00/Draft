@@ -5,3 +5,8 @@
 2020-12-09 00:39:00.468 +02:00 [INF] Starting
 2020-12-09 00:39:13.429 +02:00 [INF] Request: GetArticlesQuery  {"$type":"GetArticlesQuery"}
 2020-12-09 00:39:14.126 +02:00 [WRN] Long Running Request: GetArticlesQuery (704 milliseconds) {"$type":"GetArticlesQuery"}
+2020-12-11 12:48:25.214 +02:00 [INF] Starting
+2020-12-11 12:51:35.742 +02:00 [INF] Request: GetArticlesQuery  {"$type":"GetArticlesQuery"}
+2020-12-11 12:51:38.265 +02:00 [INF] Request: GetArticleByIdQuery  {"ArticleId":1,"$type":"GetArticleByIdQuery"}
+2020-12-11 12:51:39.677 +02:00 [WRN] Long Running Request: GetArticlesQuery (3985 milliseconds) {"$type":"GetArticlesQuery"}
+2020-12-11 12:51:49.889 +02:00 [WRN] Long Running Request: GetArticleByIdQuery (11624 milliseconds) {"ArticleId":1,"$type":"GetArticleByIdQuery"}
