@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Domain.Entities
 {
@@ -8,5 +9,7 @@ namespace Domain.Entities
     public string Title { get; set; }
     public string Content { get; set; }
     public DateTime Created { get; set; }
+    public DateTime Updated { get; set; }
+    public IEnumerable<Tag> Tags { get; set; }
   }
 }
