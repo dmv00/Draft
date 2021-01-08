@@ -19,6 +19,11 @@ export class ArticlesClient {
       const response = await axios.put<Response<number>>(this._url, command);
       return response.data.data;
    }
+
+   public async delete() {
+      const response = await axios.delete<Response<number>>(this._url);
+      return response.data.data;
+   }
    public async getById(query: IGetArticleByIdQuery) {
       const response = await axios.get<Response<ArticleByIdDto>>(`${this._url}/${query.articleId}`);
       return response.data.data;

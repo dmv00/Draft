@@ -9,8 +9,8 @@ namespace Infrastructure.DataStorage
   public class ApplicationDbContext : DbContext, IApplicationDbContext
   {
     public DbSet<Article> Articles { get; set; }
+    public DbSet<Tag> Tags { get; set; }
     
-
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
       : base(options)
     {

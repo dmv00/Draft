@@ -1,9 +1,12 @@
-﻿using System.Threading;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Application.Common.Exceptions;
 using Application.Common.Interfaces;
 using Application.Common.Models;
 using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Articles.Commands.Update
 {
@@ -12,6 +15,7 @@ namespace Application.Articles.Commands.Update
     public int ArticleId { get; set; }
     public string Title { get; set; }
     public string Content { get; set; }
+    public IEnumerable<string> Tags { get; set; }
   }
 
   public class UpdateArticleCommandHandler : IHandlerWrapper<UpdateArticleCommand, int>
@@ -31,8 +35,11 @@ namespace Application.Articles.Commands.Update
         throw new NotFoundException(nameof(Article), request.ArticleId);
       }
 
+      var tags = await _context.Tags.Where(t => request.Tags.Contains(t.Content)).ToArrayAsync();
+
       article.Content = request.Content ?? article.Content;
       article.Title = request.Title ?? article.Title;
+      article.Tags = tags;
 
       await _context.SaveChangesAsync(cancellationToken);
 

@@ -6,6 +6,7 @@ using Application.Common.Interfaces;
 using Application.Common.Models;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Articles.Queries.GetAllArticles
 {
@@ -28,6 +29,7 @@ namespace Application.Articles.Queries.GetAllArticles
       CancellationToken cancellationToken)
     {
       var articles = _context.Articles
+        .Include(ar => ar.Tags)
         .ProjectTo<ArticlesDto>(_mapper.ConfigurationProvider)
         .AsEnumerable();
 

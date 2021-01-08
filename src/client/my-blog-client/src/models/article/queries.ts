@@ -1,5 +1,5 @@
 export interface IGetArticleByIdQuery {
-   articleId: number
+   articleId: number;
 }
 
 export class GetArticleByIdQuery implements IGetArticleByIdQuery {

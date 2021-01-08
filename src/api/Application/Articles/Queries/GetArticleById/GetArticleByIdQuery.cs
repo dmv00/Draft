@@ -27,8 +27,9 @@ namespace Application.Articles.Queries.GetArticleById
 
     public async Task<Response<ArticleByIdDto>> Handle(GetArticleByIdQuery request, CancellationToken cancellationToken)
     {
-      var article = await _context.Articles.FirstOrDefaultAsync(a => a.Id == request.ArticleId,
-        cancellationToken: cancellationToken);
+      var article = await _context.Articles.Include(ar => ar.Tags)
+        .FirstOrDefaultAsync(a => a.Id == request.ArticleId,
+          cancellationToken: cancellationToken);
 
       if (article is null)
       {

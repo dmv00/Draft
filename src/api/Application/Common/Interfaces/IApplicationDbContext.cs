@@ -9,6 +9,7 @@ namespace Application.Common.Interfaces
   public interface IApplicationDbContext
   {
     public DbSet<Article> Articles { get; set; }
+    public DbSet<Tag> Tags { get; set; }
     public Task<int> SaveChangesAsync(CancellationToken cancellationToken);
   }
 }

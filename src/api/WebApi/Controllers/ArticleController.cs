@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.Articles.Commands.Create;
+using Application.Articles.Commands.Delete;
 using Application.Articles.Commands.Update;
 using Application.Articles.Queries.GetAllArticles;
 using Application.Articles.Queries.GetArticleById;
@@ -31,6 +32,11 @@ namespace WebApi.Controllers
 
     [HttpPut]
     public async Task<Response<int>> Update(UpdateArticleCommand command)
+    {
+      return await Mediator.Send(command);
+    }
+    [HttpDelete("{articleId}")]
+    public async Task<Response<int>> Delete([FromRoute]DeleteArticleCommand command)
     {
       return await Mediator.Send(command);
     }
